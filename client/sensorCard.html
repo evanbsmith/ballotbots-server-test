@@ -1,0 +1,39 @@
+<template name='sensorCard'>
+	<div class="row">
+		<div class="col s12">
+			<div class="card">
+				<div class="card-content">
+					<div class="card-title">
+						<div class="row">
+							<div class="col left">
+								<div>
+									<h5><strong>{{sensorName sensorId}} ({{sensorId}})</strong></h5>
+									<h6 class="blue-grey-text">Sensor</h6>
+								</div>
+							</div>
+							<div class="col left">
+								<div>
+									<h5><strong>{{stationId}}</strong></h5>
+									<h6 class="blue-grey-text">Station</h6>
+								</div>
+							</div>
+							<div class="col left">
+								<div>
+									<h5><strong>{{sensorDataCount this}}</strong></h5>
+									<h6 class="blue-grey-text">Detections</h6>
+								</div>
+							</div>
+							<div class="col left">
+								<div>
+									<h5><strong>{{latestSensorData this}}</strong></h5>
+									<h6 class="blue-grey-text">Last Detection</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+						<canvas id="chart-{{sensorId}}-{{stationId}}" width="400" height="100"></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

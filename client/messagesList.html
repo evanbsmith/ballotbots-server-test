@@ -1,0 +1,62 @@
+<template name="messagesList">
+	<div class="container">
+		<div class="body-wrapper">
+			<div class="row">
+				<div class="valign-wrapper">
+					<div class="col s4 valign">
+						<h5>Sensor Data Received</h5>
+					</div>
+					<div class="col s8 valign">
+						<div class='right'>
+							<a class="waves-effect waves-light btn blue-grey lighten-1" id="sendTestSensorData">Send Test Data</a>
+							<a class="waves-effect waves-light btn blue-grey lighten-1" id="clearSensorData">Clear Data</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{#if Template.subscriptionsReady}}
+			<div class="row">
+				<div class="col s12">
+					<div class="card">
+						<div class="card-content">
+							<table class="highlight">
+								<thead>
+									<tr>
+										<th>Sensor</th>
+										<th>Station</th>
+										<th>Sent</th>
+										<th>Received</th>
+										<th>Lag (ms)</th>
+									</tr>
+								</thead>
+								<tbody>
+								{{#each message in messages}}
+									<tr>
+										<td>{{message.sensorName}} ({{message.sensorId}})</td>
+										<td>{{message.stationId}}</td>
+										<td>{{formatDate message.dateTime 'h:mm:ss a - MMM, D YYYY'}}</td>
+										<td>{{formatDate message.timestamp 'h:mm:ss a - MMM, D YYYY'}}</td>
+										<td>{{getLag message}}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{else}}
+			<div class="row">
+				<div class="col s12">
+					{{> spinner}}
+					<!-- <div class="card">
+						<div class="card-content">
+							<span class="card-title">No Sensors with Data</span>
+						</div>
+					</div> -->
+				</div>
+			</div>
+			{{/if}}
+		</div>
+	</div>
+</template>

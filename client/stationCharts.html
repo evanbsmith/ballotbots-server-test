@@ -1,0 +1,6 @@
+<template name="stationCharts">
+	{{#each sensor in sensors station}}
+		{{> sensorCard sensorId=sensor stationId=station}}
+	{{/each}}
+	
+</template>

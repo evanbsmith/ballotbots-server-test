@@ -1,0 +1,31 @@
+<head>
+  <title>BallotBots Server Demo</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+</head>
+
+<body class="blue-grey lighten-5">
+
+</body>
+
+
+<template name="layout">
+	{{> Template.dynamic template=top}}
+	{{> Template.dynamic template=main}}
+	
+</template>
+
+<template name="header">
+	<nav class="teal accent-4">
+	    <div class="container">
+			<div class="nav-wrapper">
+		    	<a href="{{pathFor 'home' }}" class="brand-logo">BallotBots Server Demo</a>
+				<ul class="right hide-on-med-and-down">
+					<li class="{{isActiveRoute regex='home|list'}}"><a href="{{pathFor '/list' }}" ><i class="material-icons">list</i></a></li>
+					<li class="{{isActiveRoute regex='charts'}}"><a href="{{pathFor '/charts' }}" ><i class="material-icons">show_chart</i></a></li>
+				</ul>
+		    </div>
+		</div>
+	</nav>
+</template>
+
