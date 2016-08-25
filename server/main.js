@@ -31,9 +31,14 @@ import { SensorData } from '../both/collections.js';
 
 Meteor.startup(() => {
   // code to run on server at startup
-	
+
 	console.log('starting');
-	
+
+	Meteor.onConnection(function(connection){
+			console.log("New connection: ");
+			console.log(connection);
+	});
+
 	// server.on('ready', setup);
 //
 // 	server.on('published', Meteor.bindEnvironment(function(packet,client){
