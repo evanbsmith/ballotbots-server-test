@@ -1,0 +1,11 @@
+<template name="orgTitleBar">
+  <div class="title-bar">
+    <div class="container-fluid">
+      {{#if Template.subscriptionsReady}}
+      <h1>{{orgName}} <small>{{orgCountry}}</small></h1>
+      {{else}}
+      <h1>Loading</h1>
+      {{/if}}
+    </div>
+  </div>
+</template>

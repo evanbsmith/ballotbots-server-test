@@ -1,0 +1,49 @@
+<template name="orgElections">
+  <div class="org-elections">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="section-heading">Elections</h2>
+        </div>
+      </div>
+      <div class="org-elections-cards row">
+        {{#if Template.subscriptionsReady}}
+          {{#each election in elections}}
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card election-card">
+              <h3 class="card--title">{{election.name}}</h3>
+              <h4 class="card--date">{{formatElectionDate election.electionDate}}</h4>
+              <div class="dash"></div>
+              <div class="card--description">
+                <p><strong>Type: </strong>{{election.electionType}}</p>
+                <p><strong>Polls Open: </strong>{{formatElectionTime election.pollsOpen}}</p>
+                <p><strong>Polls Close: </strong>{{formatElectionTime election.pollsClose}}</p>
+              </div>
+              <div class="">
+                <a href="{{electionPath election._id}}" class="btn btn-light-solid btn-small center-block manage-election-button">Manage Election</a>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+        {{else}}
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card">
+            <h3 class="card--title">Loading</h3>
+          </div>
+        </div>
+        {{/if}}
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card--button">
+            <a href="#" class="btn btn-dark section-heading-button center-block" id="add-election-button" data-toggle="modal" data-target="#myModal">
+              <p class="card--icon"><i class="fa fa-plus fa-2x"></i></p>
+              <p class="card--button--title">Add Election</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- {{#if showAddElectionModal}}
+  {{> addElectionModal}}
+{{/if}} -->
+</template>

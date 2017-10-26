@@ -1,7 +1,7 @@
 {
-  "galaxy.meteor.com": { 
-     "env": { 
-       "MONGO_URL": "mongodb://ballotbotsmqtttest:DI1500KStreet@candidate.45.mongolayer.com:10735,candidate.12.mongolayer.com:11147/ballotbotsmqtttest?replicaSet=set-55df692f726d96de68000582" 
-     } 
+  "galaxy.meteor.com": {
+     "env": {
+       "MONGO_URL": "mongodb://ballotbotsmqtttest:DI1500KStreet@candidate.45.mongolayer.com:10735,candidate.12.mongolayer.com:11147/ballotbotsmqtttest?replicaSet=set-55df692f726d96de68000582"
+     }
    }
 }

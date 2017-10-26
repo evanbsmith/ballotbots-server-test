@@ -1,0 +1,126 @@
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin justify-content($variable) {
+  -webkit-justify-content:$variable;
+  -moz-justify-content:$variable;
+  -ms-justify-content:$variable;
+  justify-content:$variable;
+}
+
+@mixin flex-direction($variable) {
+  -webkit-flex-direction:$variable;
+  -moz-flex-direction:$variable;
+  -ms-flex-direction:$variable;
+  flex-direction:$variable;
+}
+
+@mixin align-items($variable) {
+  -webkit-align-items:$variable;
+  -moz-align-items:$variable;
+  -ms-align-items:$variable;
+  align-items:$variable;
+}
+
+@mixin align-self($variable) {
+  -webkit-align-self:$variable;
+  -moz-align-self:$variable;
+  -ms-align-self:$variable;
+  align-self:$variable;
+}
+
+@mixin flex-wrap($variable) {
+  -webkit-flex-wrap:$variable;
+  -moz-flex-wrap:$variable;
+  -ms-flex-wrap:$variable;
+  flex-wrap:$variable;
+}
+
+@mixin box-shadow($variable) {
+  -webkit-box-shadow:$variable;
+  -moz-box-shadow:$variable;
+  -ms-box-shadow:$variable;
+  box-shadow:$variable;
+}
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+@mixin rotate($x) {
+   @include transform(rotate($x));
+}
+
+@mixin grayscale() {
+  filter: gray;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+
+@mixin color() {
+  -webkit-filter: none;
+  -ms-filter: none;
+  filter: none;
+}
+
+@mixin input-placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder {@content}
+  ::-moz-placeholder {@content}
+  :-ms-input-placeholder {@content}
+}
+
+@mixin text-black() {
+  font-family: 'TruenoBlack', sans-serif;
+}
+
+@mixin text-extrabold(){
+  font-family: 'TruenoExtraBold', sans-serif;
+}
+
+@mixin text-bold(){
+  font-family: 'TruenoBold', sans-serif;
+}
+
+@mixin text-semibold(){
+  font-family: 'TruenoSemiBold', sans-serif;
+}
+
+@mixin text-regular(){
+  font-family: 'TruenoRegular', sans-serif;
+}
+
+@mixin text-regularitalic(){
+  font-family: 'TruenoRegularItalic', sans-serif;
+}
+
+@mixin text-light(){
+  font-family: 'TruenoLight', sans-serif;
+}
+
+@mixin text-lightitalic(){
+  font-family: 'TruenoLightItalic', sans-serif;
+}
+
+@mixin text-ultralight(){
+  font-family: 'TruenoUltraLight', sans-serif;
+}
+
+@mixin text-ultralightitalic(){
+  font-family: 'TruenoUltraLightItalic', sans-serif;
+}

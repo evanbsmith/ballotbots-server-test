@@ -1,0 +1,13 @@
+<template name="electionTitleBar">
+  <div class="title-bar">
+    <div class="container-fluid">
+      {{#if Template.subscriptionsReady}}
+        {{#with election}}
+          <h1>{{name}} <small>{{electionType}}</small></h1>
+        {{/with}}
+      {{else}}
+      <h1>Loading</h1>
+      {{/if}}
+    </div>
+  </div>
+</template>

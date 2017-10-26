@@ -1,0 +1,17 @@
+@import '../stylesheets/_variables.scss';
+
+.site-footer--wrapper{
+  padding-left:54px + 40px;
+  padding-right:40px;
+  padding-top:2rem;
+  padding-bottom:2rem;
+  background-color:$gray-light;
+
+}
+
+.site-footer {
+  h2, h3 {
+    margin:0;
+
+  }
+}

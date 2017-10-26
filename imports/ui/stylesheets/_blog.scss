@@ -1,0 +1,260 @@
+//blog style is the same in the blog page, project page and home page.
+
+.blog-main{
+  padding: 6rem 0;
+  background-color:rgba(0,0,0,.02);
+}
+
+.blog-card{
+  height: 600px;
+  background-color: #fff;
+  width: 100%;
+  padding:2rem 2rem;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.05);
+  border-radius: 0.5rem;
+  margin-bottom:6rem;
+  position: relative;
+  overflow: hidden;
+  display:block;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active{
+
+    text-decoration:none;
+
+    .tmblr-full > img {
+    opacity:.7;
+    }
+    .blog-card--title{
+    opacity:.7;
+    }
+    .blog-card--description{
+      iframe{
+        opacity:.7;
+      }
+    }
+
+  }
+
+  &--pic-frame{
+    height:230px;
+    position:relative;
+    border-radius: 0.3rem;
+    transition:.2s;
+    margin-bottom:2rem;
+    width:100%;
+    z-index: 1;
+    display: block;
+    transition:.2s;
+  }
+
+  &--pic{
+    height:230px;
+    // @include grayscale();
+    position:relative;
+    opacity:1;
+    border-radius: 0.3rem;
+    margin-bottom:2rem;
+    z-index: 5;
+  }
+
+  &--pic-frame::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background:rgba(0,0,0,0.3);
+    height:100%;
+    content:"";
+    border-radius: 0.3rem;
+  }
+
+  &--date{
+    @include text-regular();
+    color:#0096d6;
+    margin-bottom:2rem;
+    text-transform: uppercase;
+    font-size:1.25rem;
+  }
+
+   &--title{
+    @include text-semibold();
+    font-size:2rem;
+    max-width: 100%;
+    line-height:1.4;
+    margin-top:1.3rem;
+    margin-bottom:2rem;
+    color:rgba(51,51,51,.85);
+    transition:.2s;
+  }
+
+  .dash{
+    width: 50px;
+    height:5px;
+    background-color:#eee;
+    margin-bottom:3rem;
+  }
+
+  &--description{
+    @include text-light();
+    color:#58626D;
+    font-size:1.55rem;
+    line-height:1.5;
+    margin-bottom:1.5rem;
+
+    p{
+      margin-top:0;
+    }
+
+    .tmblr-full > img {
+      width: 100%;
+      margin: 0rem 0 3rem 0;
+      border-radius:.3rem;
+      transition:.2s;
+				}
+
+   .post iframe, .post img, .post object {
+     width: 100%;
+    }
+
+    iframe {
+      max-width:100%;
+      transition:.2s;
+    }
+
+  }
+
+  &--fade {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    background: #fff; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(255,255,255,0), white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(255,255,255,0), white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(255,255,255,0), white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(255,255,255,0), white); /* Standard syntax */
+  }
+
+  &--credits{
+    @include display-flex();
+
+    .author-picture{
+      background-image: url(../media/bill.jpg);
+      background-position: center;
+      background-size: cover;
+      height:40px;
+      width:40px;
+      border-radius:50%;
+      margin-right:1rem;
+      opacity:.9;
+      position: relative;
+      @include grayscale();
+    }
+
+    .author-picture-placeholder{
+      margin:0 1rem 0 0;
+      color:#eee;
+      opacity:1;
+      padding:0;
+      @include display-flex();
+      @include justify-content(center);
+      @include align-items(center);
+
+      .icon-user {
+        margin:0;
+        font-size:40px;
+      }
+    }
+
+    .author-picture::after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      // background-color: rgba(0,0,0,.2);
+      height:100%;
+      content:"";
+      border-radius:50%;
+    }
+
+    a .author-picture {
+      transition:.2s;
+
+      &:hover,
+      &:focus,
+      &.focus,
+      &:active,
+      &.active{
+        opacity:.6;
+      }
+
+    }
+
+    a .author-picture-placeholder{
+      transition:.2s;
+
+      &:hover,
+      &:focus,
+      &.focus,
+      &:active,
+      &.active{
+        opacity:1;
+      }
+
+    }
+
+    .author-name{
+      @include text-light();
+      color:#58626D;
+      font-size:1.55rem;
+
+      a{
+        color:#58626D;
+        transition:.2s;
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active{
+          opacity:.7;
+        }
+      }
+
+      .bold{
+        @include text-regular();
+      }
+    }
+  }
+
+}
+
+.blog-posts {
+  min-height: 600px;
+}
+
+
+// Media Queries ==========================================================================
+
+
+
+@media (max-width:767px) {
+
+  .blog-card {
+
+    &--title{
+     font-size:1.9rem;
+   }
+
+ }
+
+}

@@ -1,0 +1,538 @@
+// Press General==========================================================================
+
+.press{
+  background-color: rgba(0,0,0,0.02);
+
+  .header-typed{
+    width:100%;
+    height:400px;
+    background-color: #eee;
+    position:absolute;
+  }
+
+  .press-content-wrapper{
+    width:100%;
+    margin-top:70px;
+    background-color: #fff;
+    border-radius: .5rem;
+    margin-bottom:10rem;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    padding-bottom:3rem;
+
+    &--header{
+      padding:3rem;
+      background-color:#005288;
+      border-top-left-radius: .5rem;
+      border-top-right-radius: .5rem;
+      color:#fff;
+      @include display-flex();
+      @include flex-direction(column);
+      @include align-items(center);
+      @include justify-content(center);
+    }
+
+    &--body{
+      padding:0rem 6rem 3rem 6rem;
+    }
+
+    &--title{
+      @include text-bold();
+      margin-top:0;
+      margin-bottom:0;
+      font-size: 28px;
+    }
+
+    &--subtitle{
+      @include text-light();
+      margin-bottom:0;
+      text-align:center;
+      line-height: 1.3;
+    }
+
+  }
+
+}
+
+// Menu==========================================================================
+
+.press{
+
+  .right-menu-wrapper{
+    margin-top:30.8rem;
+    padding-top:2rem;
+  }
+
+  ul.press-menu{
+    list-style: none;
+    @include text-bold();
+    font-size: 15.5px;
+
+    li.light{
+      @include text-semibold;
+      margin-bottom:1.3rem;
+      margin-left:-1rem;
+
+      a{
+        color:#aaa;
+        text-decoration:none;
+        padding:.5rem 1rem;
+        transition:.2s;
+        width:100%;
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active{
+          background-color: #0096d6;
+          border-radius:.3rem;
+          color:#fff;
+        }
+      }
+    }
+
+    li.dark{
+      @include text-semibold;
+      text-transform: uppercase;
+      font-size: 12.5px;
+      margin-top:3rem;
+      margin-left:.1rem;
+
+      .icon-mail{
+        margin-right: 0.7rem;
+      }
+
+      a{
+        color:#aaa;
+        text-decoration:none;
+        transition: .2s;
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active{
+          color:#0096d6;
+        }
+      }
+    }
+  }
+
+}
+
+// Press Releases==========================================================================
+
+.release-wrapper{
+
+  border-bottom:1px solid #eee;
+
+  &--title{
+   @include text-semibold();
+   font-size:2.0rem;
+   max-width: 100%;
+   line-height:1.4;
+   margin-bottom:1.2rem;
+   max-width: 500px;
+   color:rgba(51,51,51,0.85);
+
+   a{
+     color:rgba(51,51,51,0.85);
+     transition:.2s;
+     text-decoration:none;
+
+     &:hover,
+     &:focus,
+     &.focus,
+     &:active,
+     &.active{
+       opacity:.7;
+     }
+   }
+ }
+
+  &--date{
+  @include text-regular();
+  color:#aaa;
+  margin-top:4rem;
+  margin-bottom:2.3rem;
+  text-transform: uppercase;
+  font-size:1.3rem;
+
+  .icon-news{
+    color:#ddd;
+    margin-right:.5rem;
+    font-size:14px;
+  }
+  }
+
+  &--place{
+  @include text-light();
+  color:#0096d6;
+  font-size:1.5rem;
+  margin-bottom:2rem;
+  }
+
+}
+// Press Release Detail==========================================================================
+.release-wrapper{
+
+  &--text-content {
+    @include text-light();
+    color:#58626D;
+    font-size:1.7rem;
+    line-height:1.8;
+    border-top:1px solid #eee;
+    padding-top:3rem;
+
+      p{
+        margin-bottom:3rem;
+      }
+
+      a {
+        color:#0096d6;
+        @include text-light();
+        text-decoration: underline;
+        transition:.2s;
+        word-wrap:break-word;
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active{
+          color: #005288;
+        }
+
+        img,
+        video,
+        iframe {
+          width:100%;
+          height:auto;
+        }
+      }
+  }
+
+  img{
+    width:100%;
+    height:auto;
+  }
+
+  iframe {
+    width:100%;
+    max-width:100%;
+    height:auto;
+  }
+
+  .signature{
+    margin:6rem 0 5rem 0rem;
+  }
+
+  &--author{
+  @include text-semibold();
+  color:#58626D;
+  font-size:1.6rem;
+  margin:11px 0;
+  }
+
+  &--position{
+  @include text-lightitalic();
+  color:#58626D;
+  font-size:1.6rem;
+  margin:11px 0;
+  }
+
+  &--email a{
+  @include text-light();
+  color:#58626D;
+  font-size:1.6rem;
+  margin:11px 0;
+  text-decoration: underline;
+  transition:.2s;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active{
+    opacity:.7;
+  }
+
+  }
+
+  &--phone{
+  @include text-light();
+  color:#58626D;
+  font-size:1.55rem;
+  margin:11px 0;
+  }
+
+}
+
+.right-button-wrapper{
+  text-align:right;
+  margin-top:4rem;
+  margin-bottom:-2rem;
+}
+
+// Press Coverage==========================================================================
+
+.coverage-wrapper{
+ @include display-flex();
+ border-bottom:1px solid #eee;
+ padding:4rem 0;
+
+&--pic{
+   background-image: url(../media/press-placeholder1.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   position:relative;
+   opacity:1;
+   border-radius: 0.3rem;
+   transition:.2s;
+   min-height:150px;
+   min-width: 165px;
+   margin-right:2rem;
+
+   &:hover,
+   &:focus,
+   &.focus,
+   &:active,
+   &.active{
+     opacity:.7;
+   }
+ }
+
+ &--pic::after{
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 1;
+  //  background-color: rgba(0,0,0,.3);
+   height:100%;
+   content:"";
+   border-radius: 0.3rem;
+ }
+
+ &--text{
+   @include display-flex();
+   @include flex-direction(column);
+ }
+
+ &--title{
+  @include text-semibold();
+  font-size:2.0rem;
+  max-width: 100%;
+  line-height:1.4;
+  margin-bottom:1rem;
+
+  a{
+    color:rgba(51,51,51,0.85);
+    transition:.2s;
+    text-decoration:none;
+
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active{
+      opacity:.7;
+    }
+  }
+}
+
+ &--media{
+ @include text-regular();
+ color:#0096d6 ;
+ text-transform: uppercase;
+ font-size:12px;
+ margin-bottom:.5rem;
+ margin-top:0;
+ }
+
+ &--place{
+ @include text-lightitalic();
+ color:#aaa;
+ font-size:1.4rem;
+ margin-top:0.5rem;
+ }
+
+ &--author-date{
+ @include text-light();
+ color:#aaa;
+ font-size:1.4rem;
+ margin:0;
+
+   .author{
+     @include text-semibold();
+     text-decoration:none;
+     color:#aaa;
+   }
+ }
+
+}
+
+ // Media Queries ==========================================================================
+
+ @media (max-width:1023px) {
+
+   .press{
+
+     ul.press-menu{
+       padding:0;
+     }
+
+     .press-content-wrapper{
+       &--body{
+         padding:0rem 3rem 3rem 3rem;
+       }
+     }
+
+   }
+
+   .coverage-wrapper{
+     @include flex-direction(column);
+     padding:3rem 0;
+
+     &--pic{
+        margin-bottom:2rem;
+      }
+
+     &--text{
+       margin-left:0rem;
+       margin-top:0rem;
+     }
+
+     &--title{
+      font-size:1.9rem;
+      margin-bottom:.8rem;
+    }
+
+    &--media{
+      font-size:1.3rem;
+    }
+
+    &--place{
+      font-size:1.35rem;
+    }
+
+    &--author-date{
+      font-size:1.35rem;
+    }
+
+   }
+
+ }
+
+ @media (max-width:767px) {
+
+   .press{
+
+     .right-menu-wrapper{
+       margin-top:2rem;
+     }
+
+     ul.press-menu{
+       margin-left:2rem;
+       // padding:0;
+       text-align: left;
+
+       li.light{
+         margin-bottom:1.3rem;
+         margin-left:-1rem;
+
+         a{
+           padding:.5rem 1rem;
+         }
+       }
+
+       li.dark{
+         margin-top:1.5rem;
+         margin-left:.1rem;
+         margin-bottom:3rem;
+       }
+     }
+
+.press-content-wrapper{
+
+    margin-top:0;
+
+     &--header{
+       padding:4rem 1rem;
+     }
+
+     &--title{
+       font-size:2.5rem;
+     }
+
+     &--subtitle{
+       font-size:17px;
+     }
+
+     &--body{
+       padding:0rem 3rem 3rem 3rem;
+     }
+
+   }
+ }
+
+   .release-wrapper{
+
+     &--title{
+      font-size:1.9rem;
+    }
+
+     &--date{
+     font-size:1.25rem;
+
+       .icon-news{
+         font-size:12.5px;
+       }
+     }
+
+     &--place{
+     font-size:1.45rem;
+     }
+
+     &--text-content {
+       font-size:1.6rem;
+       line-height:1.7;
+     }
+
+     &--author{
+     font-size:1.5rem;
+     margin:9px 0;
+     }
+
+     &--position{
+     font-size:1.5rem;
+     margin:9px 0;
+     }
+
+     &--email a{
+     font-size:1.5rem;
+     margin:9px 0;
+     }
+
+     &--phone{
+     font-size:1.45rem;
+     margin:9px 0;
+     }
+
+   }
+
+   .right-button-wrapper{
+
+     .btn-icon{
+       position:relative;
+       z-index: 100;
+       padding: 1rem 1rem;
+
+       .icon-download{
+         font-size:13px;
+       }
+     }
+   }
+
+ }

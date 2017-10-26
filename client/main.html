@@ -1,31 +1,22 @@
-<head>
-  <title>BallotBots Server Demo</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet">
-</head>
 
-<body class="blue-grey lighten-5">
-
-</body>
-
-
-<template name="layout">
-	{{> Template.dynamic template=top}}
-	{{> Template.dynamic template=main}}
-	
-</template>
-
-<template name="header">
-	<nav class="teal accent-4">
+<template name="topNav">
+	<nav class="navbar navbar-default navbar-fixed-top teal accent-4">
 	    <div class="container">
-			<div class="nav-wrapper">
-		    	<a href="{{pathFor 'home' }}" class="brand-logo">BallotBots Server Demo</a>
-				<ul class="right hide-on-med-and-down">
-					<li class="{{isActiveRoute regex='home|list'}}"><a href="{{pathFor '/list' }}" ><i class="material-icons">list</i></a></li>
-					<li class="{{isActiveRoute regex='charts'}}"><a href="{{pathFor '/charts' }}" ><i class="material-icons">show_chart</i></a></li>
-				</ul>
+  			<div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-mobile" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{pathFor 'home' }}">BallotBots Server</a>
+        </div>
+        <div class="collapse navbar-collapse" id="menu-mobile">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="{{isActiveRoute regex='home|list'}}"><a href="{{pathFor '/list' }}"  class="menu-item"><i class="material-icons">list</i></a></li>
+  					<li class="{{isActiveRoute regex='charts'}}"><a href="{{pathFor '/charts' }}" class="menu-item"><i class="material-icons">show_chart</i></a></li>
+          </ul>
 		    </div>
 		</div>
 	</nav>
 </template>
-

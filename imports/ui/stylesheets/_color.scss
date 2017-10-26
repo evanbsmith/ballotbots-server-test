@@ -1,0 +1,57 @@
+/* Hex */
+$color-primary-1: #2EA9DD;
+$color-primary-2: #005288;
+$color-secondary-1: #7EB89E;
+$color-secondary-2: #297373;
+$color-neutral-1: #C9C9C9;
+$color-neutral-1-dark: darken($color-neutral-1, 50%);
+
+//background colors
+.primary-color-1 {
+  background-color: $color-primary-1;
+}
+
+.primary-color-2 {
+  background-color: $color-primary-2;
+}
+
+.secondary-color-1{
+  background-color: $color-secondary-1;
+}
+
+.secondary-color-2{
+  background-color: $color-secondary-2;
+}
+
+.neutral-color-1{
+  background-color: $color-neutral-1;
+}
+
+.neutral-color-1-dark{
+  background-color: $color-neutral-1-dark;
+}
+
+//text colors
+.primary-color-1-text {
+  color: $color-primary-1;
+}
+
+.primary-color-2-text {
+  color: $color-primary-2;
+}
+
+.secondary-color-1-text {
+  color: $color-secondary-1;
+}
+
+.secondary-color-2-text {
+  color: $color-secondary-2;
+}
+
+.neutral-color-1-text {
+  color: $color-neutral-1;
+}
+
+.neutral-color-1-dark-text {
+  color: $color-neutral-1-dark;
+}

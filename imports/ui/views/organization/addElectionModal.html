@@ -1,0 +1,26 @@
+<template name="addElectionModal">
+  {{#FineModal}}
+    {{>FineModalHeader title="Add New Election" hideCloseButton=false}}
+
+    {{#autoForm collection=electionsCollection id="addElectionForm" type="insert"}}
+      {{#FineModalBody}}
+        <fieldset>
+          {{> afQuickField name='name' class="form-control-border"}}
+          {{> afQuickField name='electionType' class="form-control-border"}}
+          {{> afQuickField name='electionDate' class="form-control-border"}}
+          {{> afQuickField name='pollsOpen' class="form-control-border"}}
+          {{> afQuickField name='pollsClose' class="form-control-border"}}
+          {{> afQuickField name='organizationId' defaultValue=getOrgId class="form-control-border" }}
+        </fieldset>
+      {{/FineModalBody}}
+      {{#FineModalFooter}}
+        <button type="submit" class="btn btn-dark">Save Election</button>
+        <button data-action="close" class="btn btn-dark">Cancel</button>
+      {{/FineModalFooter}}
+    {{/autoForm}}
+  {{/FineModal}}
+
+
+
+
+</template>

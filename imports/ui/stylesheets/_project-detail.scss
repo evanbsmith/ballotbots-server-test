@@ -1,0 +1,446 @@
+.project-detail{
+
+  .project-titles {
+    width: 100%;
+    height:500px;
+    position:absolute;
+    @include display-flex();
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+    padding:4rem;
+    background: #000;
+
+    &--title{
+      color:#fff;
+      @include text-semibold();
+      text-align: center;
+      line-height: 1.3;
+      max-width:800px;
+      font-size:40px;
+      z-index: 10;
+      text-shadow: 1px 1px 1px #000;
+    }
+
+    &--subtitle{
+      color:#fff;
+      @include text-light();
+      max-width:700px;
+      text-align: center;
+      line-height: 1.3;
+      font-size:26px;
+      margin-top:5px;
+      z-index: 10;
+    }
+  }
+
+  .carousel .item {
+      width: 100%;
+      height:500px;
+      transition:.7s;
+      opacity:.6;
+  }
+
+  .carousel .item::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-image: url(../media/overlay-grid.png);
+    z-index: 100;
+    height:100%;
+    content:"";
+  }
+
+  .project-description{
+    @include display-flex();
+    @include flex-direction(column);
+    @include align-items(center);
+    padding:5rem 2rem;
+
+    .icon-tag {
+      color:#0096d6;
+      font-size:18px;
+    }
+
+    &--title{
+      @include text-bold();
+      margin-top:2rem;
+      margin-bottom:3rem;
+      color:rgba(51,51,51,.85);
+      font-size:2rem;
+    }
+
+    &--text{
+      max-width:800px;
+      @include text-light();
+      line-height: 1.8;
+      font-size:1.7rem;
+      color:#58626D;
+    }
+
+    a {
+      color:#0096d6;
+      text-decoration: underline;
+      transition:.2s;
+
+      &:hover,
+      &:focus,
+      &.focus,
+      &:active,
+      &.active{
+        color: #005288;
+      }
+    }
+
+  }
+
+  hr.project-detail{
+    border-color:#eee;
+    margin: 0 -9999rem;
+    padding: 0 9999rem;
+    display: none;
+  }
+
+  .icons-section {
+      background-color:rgba(0,0,0,.05);
+      position:relative;
+      overflow-x:hidden;
+
+      .container{
+        position:relative;
+
+        // .invisible-container{
+        //   border-left:1px solid #eee;
+        //   border-right:1px solid #eee;
+        //   width: 33%;
+        //   height:100%;
+        //   position:absolute;
+        //   top:0;
+        //   left:50%;
+        //   @include translate(-50%, 0);
+        // }
+
+      }
+
+    .icon-wrapper{
+      text-align:center;
+      @include display-flex();
+      @include flex-direction(column);
+      @include align-items(center);
+      padding:7rem 3rem 7rem 3rem;
+
+      &--icon-circle{
+        width:5.3rem;
+        height:5.3rem;
+        border-radius:50%;
+        background-color: #0096d6;
+        @include display-flex();
+        @include align-items(center);
+        @include justify-content(center);
+        margin-bottom:.5rem;
+        color:#fff;
+      }
+
+      .icon-clock {
+        font-size:30px;
+      }
+
+      .icon-flag {
+        font-size:25px;
+      }
+
+      .icon-id {
+        font-size:34px;
+      }
+
+      .icon-hand-shake {
+        font-size:20px;
+      }
+
+      .icon-reading {
+        font-size:33px;
+      }
+
+      .icon-glasses {
+        font-size:16px;
+      }
+
+      &--title{
+        @include text-bold();
+        color:rgba(51,51,51,0.85);
+        font-size:1.55rem;
+        margin-bottom:0;
+      }
+
+      &--description{
+        @include text-regular();
+        color:#58626D;
+        font-size:1.55rem;
+        line-height: 1.55;
+        margin-bottom:0rem;
+
+        a{
+          color:#58626D;
+          transition:.2s;
+          display: block;
+
+          &:hover,
+          &:focus,
+          &.focus,
+          &:active,
+          &.active{
+            opacity:.7;
+          }
+        }
+      }
+
+      .light-italic{
+        @include text-lightitalic();
+      }
+
+      .underline{
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+
+
+  .page-break{
+    @include display-flex();
+    min-height:450px;
+    position:relative;
+    @include display-flex();
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    background-color: #005288;
+
+    &--picture{
+      background-image: url(../media/women-libya.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height:100%;
+      width:100%;
+      top:0;
+      left:0;
+      position:absolute;
+      z-index: 2;
+      opacity: .9;
+      @include grayscale();
+    }
+
+    &--picture::after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 5;
+      background-color: rgba(0,0,0,0.5);
+      height:100%;
+      content:"";
+    }
+
+    &--title{
+      color:#fff;
+      font-size: 2rem;
+      margin:5rem 0 6rem 0;
+      @include text-bold();
+      text-align: center;
+      z-index:10;
+    }
+
+  }
+
+  .snippet{
+    margin-bottom: 5rem;
+    @include display-flex();
+    @include align-items(flex-start);
+    z-index:20;
+    position:relative;
+
+    &--icon-circle{
+      width:40px;
+      height:40px;
+      // background-color: red;
+      @include display-flex();
+      @include align-items(center);
+      @include justify-content(center);
+      margin-right:10px;
+      color:#0096d6;
+      position:relative;
+    }
+
+    .icon-quotes {
+      font-size:24px;
+    }
+
+    .icon-pie-chart {
+      font-size:25px;
+    }
+
+    .icon-light-bulb {
+      font-size:25px;
+    }
+
+    &--content{
+      width:100%;
+      color:#fff;
+      font-size:1.7rem;
+      line-height: 1.4;
+    }
+
+    &--text{
+      @include text-light();
+    }
+
+    &--author{
+      @include text-regular();
+    }
+
+  }
+
+  .btn-pagebreak{
+    margin-bottom:5rem;
+    z-index:10;
+  }
+
+  //blog style is the same in the blog page, project page and home page.
+
+  .blog-section{
+    @include display-flex();
+    @include flex-direction(column);
+    @include align-items(center);
+    padding: 5rem 0 4rem 0;
+    background-color:rgba(0,0,0,.02);
+
+    .icon-megaphone {
+      color:#0096d6;
+      font-size:35px;
+
+    }
+
+    &--title{
+      @include text-bold();
+      margin-top:2rem;
+      margin-bottom:6rem;
+      color:rgba(51,51,51,.85);
+      font-size:2rem;
+    }
+  }
+
+}
+
+//Media Queries ==========================================================================
+@media (max-width:1023px) {
+
+  .project-titles {
+
+    &--title{
+      max-width:90%;
+    }
+
+    &--subtitle{
+      max-width:90%;
+    }
+  }
+
+  .carousel-control{
+    width:10%;
+  }
+
+}
+
+@media (max-width:767px) {
+
+  .project-detail{
+
+    .project-titles {
+      height:400px;
+      padding:4rem 1.5rem;
+
+      &--title{
+        line-height: 1.4;
+        max-width:700px;
+        font-size:30px;
+      }
+
+      &--subtitle{
+        max-width:500px;
+        line-height: 1.5;
+        font-size:20px;
+      }
+    }
+
+    .carousel .item {
+        height:400px;
+    }
+
+    .project-description{
+      padding: 4rem 1rem;
+
+      .icon-tag {
+        font-size:17px;
+      }
+
+      &--title{
+        font-size:1.9rem;
+      }
+
+    }
+
+    .icons-section{
+      padding:2rem 0;
+
+      .icon-wrapper{
+        padding:4rem 3.5rem 4rem 3.5rem;
+      }
+    }
+
+    .icons-section.first{
+      padding:2rem 0 0 0;
+    }
+
+    .icons-section.last{
+      padding:0 0 2rem 0;
+    }
+
+    .page-break{
+
+      &--title{
+        font-size:1.9rem;
+      }
+
+      .snippet{
+        max-width: 450px;
+      }
+
+      .center{
+        @include display-flex();
+        @include justify-content(center);
+      }
+
+    }
+
+    .blog-section{
+      // padding: 4rem 1rem;
+
+      .icon-tag {
+        font-size:34px;
+      }
+
+      &--title{
+        font-size:1.9rem;
+      }
+
+    }
+
+
+  }
+
+}

@@ -1,0 +1,123 @@
+// ---
+// # Only the main Sass file needs front matter (the dashes are enough)
+// ---
+@charset "utf-8";
+
+
+/* path to glyphicons */
+$icon-font-path: "{}/node_modules/bootstrap-sass/assets/fonts/bootstrap/";
+
+/* custom variable */
+//$body-bg: red;
+
+// import bootstrap-sass npm package
+@import "{}/node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+// import custom DI styles
+@import "{}/imports/ui/stylesheets/_fonts.scss";
+@import "{}/imports/ui/stylesheets/_variables.scss";
+@import "{}/imports/ui/stylesheets/_color.scss";
+@import "{}/imports/ui/stylesheets/_mixins.scss";
+@import "{}/imports/ui/stylesheets/_utilities.scss";
+@import "{}/imports/ui/stylesheets/_anti-bootstrap.scss";
+@import "{}/imports/ui/stylesheets/_icons.scss";
+@import "{}/imports/ui/stylesheets/_cards.scss";
+@import "{}/imports/ui/stylesheets/_components.scss";
+@import "{}/imports/ui/stylesheets/_main-nav.scss";
+@import "{}/imports/ui/stylesheets/_home.scss";
+@import "{}/imports/ui/stylesheets/_resources.scss";
+@import "{}/imports/ui/stylesheets/_team.scss";
+@import "{}/imports/ui/stylesheets/_press.scss";
+@import "{}/imports/ui/stylesheets/_blog.scss";
+@import "{}/imports/ui/stylesheets/_headers-footers.scss";
+@import "{}/imports/ui/stylesheets/_project-detail.scss";
+@import "{}/imports/ui/stylesheets/_about.scss";
+@import "{}/imports/ui/stylesheets/_work.scss";
+@import "{}/imports/ui/stylesheets/_resource-detail.scss";
+@import "{}/imports/ui/stylesheets/_projects.scss";
+@import "{}/imports/ui/stylesheets/_contact.scss";
+
+
+body {
+  font-family: 'TruenoRegular';
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(0,0,0,0.05);
+}
+
+#app-body-layout1 {
+    margin-top:65px;
+}
+
+.body-home {
+  margin-top:0px;
+}
+
+.page-title {
+  font-weight: bold;
+  text-align: center;
+  color: #858C91;
+  margin: 40px 0 10px 0;
+  font-size: 34px;
+}
+.page-subtitle {
+  text-align: center;
+  color: #858C91;
+  opacity: 0.6;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 20px 0 10px 0;
+}
+
+
+.nav-pills {
+  background: #ddd;
+  margin: 0 0 30px 0;
+}
+
+.nav-pills > li + li {
+  margin-left: 0px;
+}
+.nav-pills > li > a {
+  border-radius: 0;
+  background: #ddd;
+  color: #fff;
+  border-right: 4px solid #fff;
+  line-height: 2.5;
+  padding: 10px 80px;
+  letter-spacing: 1px;
+}
+
+.nav-pills > li.active > a {
+  background: #ddd;
+}
+.nav-pills > li.active > a:hover {
+  background: #ddd;
+  border-color: #fff;
+}
+.nav-pills > li.active > a:focus {
+  background: #ddd;
+  border-color: #fff;
+}
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  border-color: #fff;
+}
+
+
+.dropdown-menu {
+  padding: 0px;
+  z-index: 2000;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.dropdown-menu > li > a  {
+  border-radius: 0;
+  line-height: 2.5;
+  padding: 5px 40px;
+  letter-spacing: 1px;
+  color: #D4D8DB !important;
+}

@@ -1,0 +1,42 @@
+<template name="electionCountdown">
+{{#if Template.subscriptionsReady}}
+  {{#if beforeElection}}
+    <p class="card--stat primary-color-2-text">
+      <strong>
+        {{#if showOpenClock}}
+          {{#with openClockValues}}
+            {{hours}}:{{minutes}}:{{seconds}}
+          {{/with}}
+        {{else}}
+          {{openDays}} days
+        {{/if}}
+      </strong>
+    </p>
+    <p class="card--stat-label">Until Polls Open</p>
+  {{else}}
+    {{#if duringElection}}
+      <p class="card--stat primary-color-2-text">
+        <strong>
+          {{#with duringElectionClockValues}}
+            {{hours}}:{{minutes}}:{{seconds}}
+          {{/with}}
+        </strong>
+      </p>
+      <p class="card--stat-label">Until Polls Close</p>
+    {{else}}
+    <p class="card--stat primary-color-2-text">
+      <strong>
+      {{#if showCloseClock}}
+        {{#with closeClockValues}}
+          {{hours}}:{{minutes}}:{{seconds}}
+        {{/with}}
+      {{else}}
+        {{closeDays}} days
+      {{/if}}
+      </strong>
+      </p>
+      <p class="card--stat-label">Since Polls Closed</p>
+    {{/if}}
+  {{/if}}
+{{/if}}
+</template>

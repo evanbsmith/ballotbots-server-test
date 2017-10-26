@@ -1,0 +1,13 @@
+<template name="electionCharts">
+  <div class="clearfix">
+    <div class="col-xs-4 col-lg-4 col-xl-4">
+      {{> electionTurnoutChart electionId}}
+    </div>
+    <div class="col-xs-4 col-lg-4 col-xl-4">
+      {{> electionVelocityChart electionId}}
+    </div>
+    <div class="col-xs-4 col-lg-4 col-xl-4">
+      {{> electionAccelerationChart electionId}}
+    </div>
+  </div>
+</template>

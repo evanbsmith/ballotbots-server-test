@@ -1,0 +1,15 @@
+<template name="layout2">
+	<div class="app-body-layout2">
+		<div class="app-body-left">
+			{{> Template.dynamic template=leftNav}}
+		</div>
+		<div class="app-body-main">
+				{{> Template.dynamic template=titleBar}}
+			  {{> Template.dynamic template=content1}}
+			  {{> Template.dynamic template=content2}}
+		</div>
+		<div class="app-footer">
+			{{> Template.dynamic template=footer}}
+		</div>
+	</div>
+</template>

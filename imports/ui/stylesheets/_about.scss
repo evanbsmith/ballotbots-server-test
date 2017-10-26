@@ -1,0 +1,337 @@
+//About ==========================================================================
+
+.about{
+
+  .header-typeb{
+    position:relative;
+    @include display-flex();
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+    padding:4rem;
+    height:500px;
+    width:100%;
+    background: #000;
+    z-index: 1;
+
+    &--image{
+      position:absolute;
+      height:500px;
+      top:0;
+      left:0;
+      width:100%;
+      background: url(../media/women-voting.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 3;
+      opacity:.5;
+      transition:.7s;
+    }
+
+    &--title{
+      color:#fff;
+      @include text-semibold();
+      text-align: center;
+      z-index: 10;
+      line-height: 1.3;
+      max-width:800px;
+      font-size:40px;
+      text-shadow: 1px 1px 1px #000;
+    }
+
+    &--subtitle{
+      color:#fff;
+      @include text-light();
+      max-width:700px;
+      text-align: center;
+      line-height: 1.3;
+      z-index: 10;
+      font-size:26px;
+      margin-top:5px;
+      text-shadow: 1px 1px 1px #000;
+    }
+  }
+
+  .header-typeb::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index:5;
+    background-image: url(../media/overlay-grid.png);
+    height:100%;
+    content:"";
+  }
+
+  .about-description{
+    @include display-flex();
+    @include flex-direction(column);
+    @include align-items(center);
+    padding:5rem 2rem;
+
+    .icon-about {
+      color:#0096d6;
+      font-size:33px;
+    }
+
+    &--title{
+      @include text-bold();
+      margin-top:2rem;
+      margin-bottom:3rem;
+      color:rgba(51,51,51,.85);
+      font-size:2rem;
+    }
+
+    &--text{
+      max-width:800px;
+      @include text-light();
+      line-height: 1.8;
+      font-size:1.7rem;
+      color:#58626D;
+    }
+
+  }
+
+}
+
+.about-sections{
+  background-color:rgba(0,0,0,.02);
+  overflow-x: hidden;
+
+  hr{
+    border-color:#eee;
+    margin: 0 -9999rem;
+    padding: 0 9999rem;
+  }
+
+  .section{
+    padding:6rem 3rem;
+
+    &--icon-wrapper{
+      @include display-flex();
+      @include align-items(center);
+    }
+
+    &--icon-circle{
+      width:6rem;
+      height:6rem;
+      border-radius:50%;
+      background-color: #0096d6;
+      @include display-flex();
+      @include align-items(center);
+      @include justify-content(center);
+      color:#fff;
+      margin-right:1.5rem;
+
+      .icon-politics{
+        font-size: 30px;
+      }
+
+      .icon-governance{
+        font-size: 30px;
+      }
+
+      .icon-peace{
+        font-size: 34px;
+      }
+
+      .icon-reading{
+        font-size: 32px;
+      }
+    }
+
+    &--title{
+      @include text-bold();
+      color:rgba(51,51,51,.85);
+      margin:0;
+      font-size:2rem;
+    }
+
+    &--subtitle{
+      @include text-regular();
+      margin-left: 7.5rem;
+      color:#58626D;
+      margin-top:-1rem;
+      line-height: 1.5;
+      font-size:17px;
+    }
+    
+    &--count {
+      @include text-regular();
+      margin-left: 7.5rem;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #005288;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    &--content{
+      @include text-light();
+      line-height: 1.7;
+      font-size:1.6rem;
+      color:#58626D;
+      margin-top:1.7rem;
+    }
+
+    button{
+      margin-top:1.7rem;
+    }
+
+    button:focus,
+    button:active,
+    button:visited{
+      outline:none !important;
+      box-shadow:none !important;
+    }
+
+    .featured{
+      text-transform: uppercase;
+      color:#58626D;
+      @include text-light();
+      margin:4rem 0 1rem 0;
+      display:block;
+      font-size:11.5px;
+    }
+
+    &--project{
+      margin-bottom:3.5rem;
+
+      .icon-chain{
+        @include rotate(90deg);
+        font-size:2rem;
+        margin-right:.7rem;
+        margin-left:-2.7rem;
+      }
+
+      .project-name{
+        @include text-semibold();
+        margin-bottom:0;
+        line-height: 1.6;
+        font-size:15px;
+        text-decoration: underline;
+        transition:.2s;
+        color:rgba(51,51,51,.85);
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active{
+          opacity:.7;
+        }
+      }
+
+      .project-info{
+        @include text-lightitalic();
+        margin-top:5px;
+        font-size:15px;
+        color:#58626D;
+      }
+    }
+
+  }
+
+}
+
+//Media Queries ==========================================================================
+
+@media (max-width:1199px) {
+
+  .about-sections{
+
+    .section{
+      padding:6rem 0rem;
+    }
+
+  }
+}
+
+@media (max-width:767px) {
+
+.about{
+
+  .header-typeb{
+    padding:4rem 1.5rem;
+    height:400px;
+
+    &--image{
+      height:400px;
+    }
+
+    &--title{
+      line-height: 1.4;
+      margin-top:1rem;
+      font-size:30px;
+      max-width: 700px;
+    }
+
+    &--subtitle{
+      display:none;
+    }
+  }
+
+  .about-description{
+    padding: 4rem 1rem;
+
+    .icon-about {
+      font-size:32px;
+    }
+
+    &--title{
+      font-size:1.9rem;
+    }
+
+  }
+
+  .section{
+
+    &--subtitle{
+      margin-bottom:2.5rem;
+      font-size:16px;
+      margin-left: 6.5rem;
+    }
+    
+    &--count {
+      margin-left: 6.5rem;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    &--content{
+      margin-left:6.5rem;
+    }
+
+
+    &--icon-circle{
+      width:5rem;
+      height:5rem;
+
+
+      .icon-politics{
+        font-size: 25px;
+      }
+
+      .icon-governance{
+        font-size: 25px;
+      }
+
+      .icon-peace{
+        font-size: 29px;
+      }
+
+      .icon-reading{
+        font-size: 27px;
+      }
+    }
+
+    &--title{
+      font-size:1.9rem;
+    }
+
+  }
+
+}
+
+}

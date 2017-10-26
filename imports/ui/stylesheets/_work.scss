@@ -1,0 +1,683 @@
+//Work begins ==========================================================================
+
+.work{
+  overflow-x:hidden;
+
+//Header (first-section) ==========================================================================
+  .header-typeb{
+    position:relative;
+    @include display-flex();
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+    padding:4rem;
+    height:500px;
+    width:100%;
+    background: #000;
+    z-index:1;
+
+    &--image{
+      position:absolute;
+      height:500px;
+      top:0;
+      left:0;
+      width:100%;
+      background-size: cover;
+      z-index: 3;
+      opacity:.8;
+      transition:.7s;
+    }
+
+
+    &--title{
+      color:#fff;
+      @include text-semibold();
+      text-align: center;
+      z-index: 10;
+      line-height: 1.3;
+      max-width:800px;
+      font-size:40px;
+      text-shadow: 1px 1px 1px #000;
+    }
+
+    &--subtitle{
+      color:#fff;
+      @include text-light();
+      max-width:700px;
+      text-align: center;
+      line-height: 1.3;
+      z-index: 10;
+      font-size:26px;
+      margin-top:5px;
+      text-shadow: 1px 1px 1px #000;
+    }
+  }
+
+  .header-typeb::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index:5;
+    background-image: url(../media/overlay-grid.png);
+    height:100%;
+    content:"";
+  }
+
+//Second section ==========================================================================
+
+  .work-type-sections{
+    background-color:rgba(0,0,0,.02);
+
+    hr{
+      border-color:#eee;
+      margin: 0 -9999rem;
+      padding: 0 9999rem;
+    }
+
+    .type-section{
+      padding:6rem 3rem;
+
+      &--icon-wrapper{
+        @include display-flex();
+        @include align-items(center);
+      }
+
+      &--icon-circle{
+        width:6rem;
+        min-width:6rem;
+        height:6rem;
+        border-radius:50%;
+        background-color: #0096d6;
+        @include display-flex();
+        @include align-items(center);
+        @include justify-content(center);
+        color:#fff;
+        margin-right:1.5rem;
+
+        .icon-hand-shake{
+          font-size:20px;
+        }
+
+        .icon-glasses{
+          font-size:17px;
+        }
+
+      }
+
+      &--title{
+        @include text-bold();
+        color:rgba(51,51,51,.85);
+        margin:0;
+        font-size:2rem;
+        line-height:1.2;
+      }
+
+      &--subtitle{
+        @include text-regular();
+        margin-left: 7.5rem;
+        color:#58626D;
+        margin-top:-1rem;
+        line-height: 1.5;
+        font-size:17px;
+      }
+
+      .subtitle-extras{
+        margin-top:2px;
+      }
+
+      &--content{
+        @include text-light();
+        line-height: 1.7;
+        font-size:1.6rem;
+        color:#58626D;
+        margin-top:1.7rem;
+      }
+
+      button{
+        margin-top:1.7rem;
+      }
+
+    }
+
+  }
+
+//Clients-page ==========================================================================
+
+  .clients-mechanism-section{
+    padding:7rem 1rem;
+    background-color: #005288;
+    position:relative;
+  }
+
+  .clients-mechanism-section::before{
+    content:"";
+    position: absolute;
+    left: 25%;
+    @include translate (-50%,0);
+    top: -20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 20px;
+    border-color: transparent transparent #005288 transparent;
+    z-index:2;
+  }
+
+//Clients-page: first-section ==========================================================================
+
+  .clients-section{
+
+    &--description{
+      @include display-flex();
+      @include flex-direction(column);
+      @include align-items(center);
+      margin-bottom:5rem;
+    }
+
+    &--title{
+      @include text-bold();
+      margin-top:0rem;
+      margin-bottom:3rem;
+      color:#fff;
+      font-size:2rem;
+    }
+
+    &--text{
+      max-width:800px;
+      @include text-light();
+      line-height: 1.8;
+      font-size:1.7rem;
+      color:#fff;
+      margin:0rem;
+      text-align:center;
+    }
+
+    &--cards{
+      @include display-flex();
+      @include flex-direction(column);
+      @include align-items(center);
+      margin-bottom:7rem;
+    }
+
+    .client-card{
+      background: #fff;
+      box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.05);
+      border-radius: 0.4rem;
+      margin-bottom:3rem;
+      width:700px;
+
+      &--header{
+        @include display-flex();
+        @include align-items(center);
+        @include justify-content(space-between);
+        background-color: rgba(0,0,0,0.03);
+        padding:.6rem 2.3rem;
+        cursor:pointer;
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active{
+
+        .btn-icon-mechanisms {
+          background: #0096d6;
+          opacity:1;
+          color: #fff;
+          }
+        }
+
+      }
+
+      &--client{
+        color:#58626D;
+        @include text-semibold();
+        line-height:1.3;
+        font-size:1.6rem;
+        margin-bottom:0.5rem;
+        margin-right:2rem;
+        width:90%;
+      }
+
+      &--subheader{
+        padding: 0 2.3rem;
+        margin-bottom:0;
+      }
+      
+      &--description-text {
+        font-size:1.5rem;
+        @include text-light();
+        line-height:1.6;
+        color:#58626D;
+        margin: 1.8rem 0;
+      }
+      
+      &--contracts-list {
+        padding: 0;
+      }
+
+      &--mechanism{
+        @include display-flex();
+        @include align-items(center);
+        @include justify-content(space-between);
+        color:#0096d6;
+        @include text-regular();
+        line-height:1.4;
+        font-size:15px;
+        border-bottom:1px solid #eee;
+        padding:.9rem 0;
+
+        span{
+          width:85%;
+        }
+
+        .icon-chevron-down{
+          margin-right:.7rem;
+          font-size:11px;
+          cursor: pointer;
+        }
+      }
+
+      &--mechanism-body{
+        margin:2.5rem 0;
+        padding: 0 2.7rem;
+      }
+
+      &--mechanism-body:last-of-type{
+        margin:2.5rem 0 3.4rem 0;
+        padding: 0 2.7rem;
+      }
+
+
+      &--mechanism-text{
+        font-size:1.5rem;
+        @include text-light();
+        line-height:1.6;
+        color:#58626D;
+
+        p{
+          margin-bottom:2rem;
+        }
+
+        a{
+          color:#0096d6;
+          text-decoration: underline;
+          transition:.2s;
+
+          &:hover,
+          &:focus,
+          &.focus,
+          &:active,
+          &.active{
+            color: #005288;
+          }
+        }
+
+      }
+
+    }
+
+    .client-card:last-child{
+      margin-bottom:0rem;
+    }
+
+  }
+
+  hr.clients{
+    border-color:rgba(255,255,255,.3);
+    margin: 0 -9999rem;
+    padding: 0 9999rem;
+  }
+
+//Clients-page: second-section ==========================================================================
+
+.clients-contact{
+  padding-top:7rem;
+  @include display-flex();
+  @include flex-direction(column);
+  @include align-items(center);
+
+  &--description{
+    @include display-flex();
+    @include flex-direction(column);
+    @include align-items(center);
+    margin-bottom:5rem;
+  }
+
+    &--title{
+      @include text-bold();
+      margin-top:0rem;
+      margin-bottom:3rem;
+      color:#fff;
+      font-size:2rem;
+    }
+
+    &--text{
+      max-width:800px;
+      @include text-light();
+      line-height: 1.8;
+      font-size:1.7rem;
+      color:#fff;
+      margin:0rem;
+      text-align:center;
+    }
+
+}
+
+
+//Jobs-page ==========================================================================
+
+    .jobs-section{
+      padding:7rem 1rem;
+      background-color: #005288;
+      position:relative;
+    }
+
+    .jobs-section::before{
+      content:"";
+      position: absolute;
+      left: 25%;
+      @include translate (-50%,0);
+      top: -20px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 20px 20px 20px;
+      border-color: transparent transparent #005288 transparent;
+      z-index:2;
+    }
+
+
+//Jobs-page: first-section ==========================================================================
+
+  .job-openings{
+
+    &--description{
+      @include display-flex();
+      @include flex-direction(column);
+      @include align-items(center);
+      margin-bottom:5rem;
+    }
+
+    &--title{
+      @include text-bold();
+      margin-top:0rem;
+      margin-bottom:3rem;
+      color:#fff;
+      font-size:2rem;
+    }
+
+    &--text{
+      max-width:800px;
+      @include text-light();
+      line-height: 1.8;
+      font-size:1.7rem;
+      color:#fff;
+      margin:0rem;
+      text-align:center;
+    }
+
+    &--cards{
+      @include display-flex();
+      @include flex-direction(column);
+      @include align-items(center);
+      margin-bottom:7rem;
+    }
+
+    .job-card{
+      background: #fff;
+      box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.05);
+      border-radius: 0.4rem;
+      margin-bottom:3rem;
+      width:500px;
+
+      &--header{
+        @include display-flex();
+        @include align-items(center);
+        @include justify-content(space-between);
+        background-color: rgba(0,0,0,0.03);
+        padding:.6rem 2.3rem;
+        cursor:pointer;
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active{
+
+        .btn-icon-jobs {
+          background: #0096d6;
+          opacity:1;
+          color: #fff;
+          }
+        }
+      }
+
+      &--header-titles{
+        // @include align-items(center);
+      }
+
+      &--title{
+        margin-right:1rem;
+        color:#58626D;
+        @include text-semibold();
+        line-height:1.3;
+        font-size:1.6rem;
+      }
+
+      &--location{
+        @include text-light();
+        font-size:14.5px;
+        color:#58626D;
+        line-height:1.3;
+        margin-right:1rem;
+      }
+
+    }
+
+    .job-card:last-child{
+      margin-bottom:0rem;
+    }
+
+  }
+
+  hr.jobs{
+    border-color:rgba(255,255,255,.3);
+    margin: 0 -9999rem;
+    padding: 0 9999rem;
+  }
+
+//Jobs-page: second-section ==========================================================================
+
+.jobs-contact{
+  padding-top:7rem;
+  @include display-flex();
+  @include flex-direction(column);
+  @include align-items(center);
+
+  &--description{
+    @include display-flex();
+    @include flex-direction(column);
+    @include align-items(center);
+    margin-bottom:5rem;
+  }
+
+    &--title{
+      @include text-bold();
+      margin-top:0rem;
+      margin-bottom:3rem;
+      color:#fff;
+      font-size:2rem;
+    }
+
+    &--text{
+      max-width:800px;
+      @include text-light();
+      line-height: 1.8;
+      font-size:1.7rem;
+      color:#fff;
+      margin:0rem;
+      text-align:center;
+    }
+
+}
+
+//Work ends==========================================================================
+
+}
+
+//Media Queries ==========================================================================
+
+@media (max-width:1199px) {
+
+  .work{
+
+    .work-type-sections{
+      .type-section{
+        padding:6rem 0rem;
+      }
+    }
+
+  }
+
+}
+
+@media (max-width:767px) {
+
+  .work{
+
+    .header-typeb{
+      padding:4rem 1.5rem;
+      height:400px;
+      &--image{
+        height:400px;
+      }
+      &--title{
+        line-height: 1.4;
+        margin-top:1rem;
+        font-size:30px;
+        max-width: 700px;
+      }
+      &--subtitle{
+        display:none;
+      }
+    }
+
+    .work-type-sections{
+      .type-section{
+        &--subtitle{
+          margin-bottom:2.5rem;
+          font-size:16px;
+          margin-left: 6.5rem;
+        }
+        .subtitle-extras{
+          margin-top:-1rem;
+        }
+        &--content{
+          margin-left:6.5rem;
+        }
+        &--icon-circle{
+          width:5rem;
+          min-width:5rem;
+          height:5rem;
+          .icon-hand-shake{
+            font-size: 17px;
+          }
+          .icon-glasses{
+            font-size: 14px;
+          }
+        }
+        &--title{
+          font-size:1.9rem;
+        }
+      }
+    }
+
+    .clients-mechanism-section{
+      padding:5rem 1rem;
+    }
+
+    .clients-mechanism-section::before{
+      left: 50%;
+    }
+
+
+    .clients-section{
+      &--title{
+        font-size:1.9rem;
+      }
+      &--description{
+        margin-bottom:4rem;
+      }
+      &--cards{
+        margin-bottom:5rem;
+      }
+      .client-card{
+        width:100%;
+
+        &--mechanism-body{
+          padding: 0;
+        }
+      }
+    }
+
+    .clients-contact{
+      padding-top:5rem;
+      &--description{
+        margin-bottom:4rem;
+      }
+      &--title{
+          font-size:1.9rem;
+        }
+      }
+
+    .jobs-section{
+      padding:5rem 1rem;
+    }
+
+    .jobs-section::before{
+      left: 50%;
+    }
+
+
+    .job-openings{
+      &--title{
+        font-size:1.9rem;
+      }
+      &--description{
+        margin-bottom:4rem;
+      }
+      &--cards{
+        margin-bottom:5rem;
+        padding:0 1rem;
+      }
+      .job-card{
+        max-width:100%;
+        &--header-titles{
+          @include display-flex();
+          @include flex-direction(column);
+        }
+        &--title{
+          margin-bottom:0;
+        }
+        &--location{
+          margin-top:5px;
+        }
+      }
+    }
+
+    .jobs-contact{
+      padding-top:5rem;
+      &--description{
+        margin-bottom:4rem;
+      }
+      &--title{
+          font-size:1.9rem;
+        }
+      }
+
+  }
+
+}
