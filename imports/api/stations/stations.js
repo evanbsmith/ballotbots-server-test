@@ -24,6 +24,11 @@ let stationSchema = new SimpleSchema({
   organizationId: {
     type: String,
     label: "Organization ID for Polling Station"
+  },
+  status: {
+    type: String,
+    label: "Status",
+    allowedValues:["Active","Inactive"]
   }
 });
 
